@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/personal_code/!svn/ver/11/oop/ass1
+END
+Element.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/personal_code/!svn/ver/10/oop/ass1/Element.hpp
+END
+Pool.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/personal_code/!svn/ver/10/oop/ass1/Pool.hpp
+END
+Parser.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/personal_code/!svn/ver/9/oop/ass1/Parser.hpp
+END
+Text.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/personal_code/!svn/ver/7/oop/ass1/Text.cpp
+END
+Visitor.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/personal_code/!svn/ver/7/oop/ass1/Visitor.hpp
+END
+String.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/personal_code/!svn/ver/9/oop/ass1/String.cpp
+END
+Element.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/personal_code/!svn/ver/9/oop/ass1/Element.cpp
+END
+Pool.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/personal_code/!svn/ver/10/oop/ass1/Pool.cpp
+END
+Text.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/personal_code/!svn/ver/10/oop/ass1/Text.hpp
+END
+Node.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/personal_code/!svn/ver/7/oop/ass1/Node.hpp
+END
+String.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/personal_code/!svn/ver/9/oop/ass1/String.hpp
+END
+parser_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/personal_code/!svn/ver/9/oop/ass1/parser_test.cpp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/personal_code/!svn/ver/10/oop/ass1/Makefile
+END
+Parser.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/personal_code/!svn/ver/9/oop/ass1/Parser.cpp
+END

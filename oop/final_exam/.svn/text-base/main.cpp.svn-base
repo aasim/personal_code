@@ -1,0 +1,82 @@
+#include "MyVector.hpp"
+#include "Traits.hpp"
+#include "Reflection.hpp"
+#include <iostream>
+#include <assert.h>
+#include <stdlib.h>
+
+void doit(Binding *b1, Binding *b2) {
+    Member a_i = b1->get_member("i_member");
+    Member b_i = b2->get_member("i_member");
+    Member b_x = b2->get_member("x_member");
+    //Member fail = b2->get_member("nonexistent_member");
+    
+    std::cout << a_i.get<int>() << std::endl;
+    std::cout << b_i.get<int>() << std::endl;
+    std::cout << b_x.get<double>() << std::endl;
+
+    try {
+        std::cout << a_i.get<double>() << std::endl;
+    } catch (const char * e) {
+        assert(strcmp(e, "Bad Cast") == 0);
+    }
+}
+
+int main() {
+    // 1 - MyVector 
+    {
+
+	MyVector<int> a;
+	a.push_back(1);
+	a.push_back(2);
+	
+	assert(a.at(0) == 1);
+	assert(a.at(1) == 2);
+	
+	MyVector<int> b = a;
+
+	assert(b.at(0) == 1);
+	assert(b.at(1) == 2);
+	assert(b.get_data() == a.get_data());
+	
+	b.push_back(3);
+
+	assert(b.get_data() != a.get_data());
+	assert(b.at(0) == 1);
+	assert(b.at(1) == 2);
+	assert(b.at(2) == 3);
+    }
+
+    // 2 - Traits
+    {
+        char * buf = (char *) malloc (sizeof(char) * 20);
+        output<int>(buf, 1);
+        std::cout << buf << std::endl;
+        output<int>(buf, 56);
+        std::cout << buf << std::endl;
+        output<double>(buf, 0015.000305000);
+        std::cout << buf << std::endl;
+        free(buf);
+    }
+
+    // 3 - Reflection
+    {
+        A a;
+        B b;
+
+        a.i_member = 5;
+        b.i_member = 2;
+        b.x_member = 5.643;
+
+        Binding * b1 = new Binding_tmpl<A>(&a);
+        Binding * b2 = new Binding_tmpl<B>(&b);
+    
+        doit(b1, b2);
+
+        delete b1;
+        delete b2;
+
+    }
+
+    return 0;
+}
